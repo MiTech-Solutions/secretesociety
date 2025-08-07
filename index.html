@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Society Streetwear</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <div class="navbar">
+      <img src="SSSW_LOGO_banner.png" alt="Logo" class="logo" />
+      <div class="menu-icon active" onclick="toggleMenu()">☰</div>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="index.html">Catalogue</a>
+        <a href="index.html">About Us</a>
+        <div class="nav-btn"><a href="index.html" class="order-button">Login</a></div>
+        
+      </div>
+    </div>
+    <header>
+        <div class="hero">
+            <h2 class="coming-soon">Who are we?</h2>
+            <hr>
+            <P>Secret Society Streetwear is an exclusive streetwear brand built on individuality, quality, and culture. 
+               Inspired by underground movements and timeless labels like Supreme, Comme des Garçons, and Vans, we deliver bold, 
+               limited-edition pieces that stand out without saying a word. Every drop is carefully curated to reflect the edge 
+               of street style while staying rooted in authenticity and craftsmanship. No hype—just real fashion for those who know. 
+               Join the society. Stay unseen, move loud.
+            </P>
+            <h3 class="coming-soon">COUNTDOWN TO</h3>
+            <h2 class="coming-soon">THE NEW WORLD ORDER</h2>
+            <hr>
+            <br>
+            <p class="launch-date" id="launch"></p>
+            <P class="sub-text">official website and merch release date October 1st 2025!</P>
+        </div>
+    </header>
+<script src="response.js"></script>
+</body>
+  <!-- HTML Footer Section -->
+  <div class="footer-section">
+    <div class="footer-left">
+        <h2>Get in Touch</h2>
+        <p>
+          No hype—just real fashion for those who know. Join the society. Stay unseen, move loud.
+        </p>
+        <div class="social-icons">
+        <a href="https://www.instagram.com/secretsocietystreetwearza/"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+    <!-- <div class="footer-right">
+        <div class="contact-card">
+        <i class="fab fa-dribbble"></i>
+        <div><a href="#">dribbble.com/example</a></div>
+    </div> -->
+    <div class="contact-card">
+      <i class="fas fa-envelope"></i>
+      <div><a href="mailto:contactsecretsocietystreet@gmail.com">contactsecretsocietystreet@gmail.com</a></div>
+    </div>
+  </div>
+
+    <script>
+        var countDownDate = new Date("Oct 1, 2025 00:00:00").getTime();
+
+        var x = setInterval(function() {
+            var now      = new Date().getTime(); 
+            var distance = countDownDate - now;
+
+            var days    = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours   = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("launch").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("launch").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+</html>
