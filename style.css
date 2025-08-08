@@ -218,6 +218,8 @@ p{
   header{
     background-image: linear-gradient(rgba(0,0,0,1 )), url(concept.jpg);
     height: 57vh;
+    background-position: center;
+    background-size: cover;
   }
   .hero{
     top: 26%;
